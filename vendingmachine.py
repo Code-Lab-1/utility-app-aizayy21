@@ -13,6 +13,7 @@ def create_box(message):
 
 # Example usage:
 create_box('Welcome to our Vending Machine\n\n')
+print("How Can We Help you?")
 
 #Vending Machine
 
@@ -20,7 +21,8 @@ Total_stock = [3,6,4,2,1]
 
 #function to take money input from user
 def money_input():
-    money = int(input("Enter your amount: "))
+    money = int(input("Enter your total amount of money: "))
+    print("How Can We Help you?")
     menu(money)
 
 #function to show menu and get user response
@@ -92,7 +94,7 @@ def balance(money_in,purchase,item):
                 menu(bal)
             else:
                 return "Collect your Balance: $" + str(bal)
-                print("Thank you for using our service.")
+                print("Thank you for using our service 🎰")
                 print("Have a great day ahead!")
         # If stock is not available
         else:
@@ -105,7 +107,11 @@ def balance(money_in,purchase,item):
         
 # Main driver function
 def main():
-    print("How Can We Help you?!\n\n")
+    print("🟥🟥🟥🟥")
+    print("🟥🍬🍫🏧")
+    print("🟥🧃🍭💳")
+    print ("🟥⬛⬛🟥")
+    print("🟥⬜⬜🟥")
     money_input()
 
 main()
