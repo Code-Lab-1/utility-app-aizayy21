@@ -1,3 +1,19 @@
+def create_box(message):
+    # Get the length of the message
+    length = len(message)
+    
+    # Print the top of the box
+    print('-' * (length + 4))
+    
+    # Print the sides of the box
+    print(' ' + message + ' ')
+    
+    # Print the bottom of the box
+    print('-' * (length + 4))
+
+# Example usage:
+create_box('Welcome to our Vending Machine\n\n')
+
 #Vending Machine
 
 Total_stock = [3,6,4,2,1]
@@ -67,14 +83,17 @@ def balance(money_in,purchase,item):
             print("Selected item Stock left: " + str(left[item-1]))
             bal = money_in - purchase
             print("Item with code {} is dispatched. Kindly collect it".format(item))
+            print("Thank you for using our service!")
             print("You have ${} balance left".format(bal))
-
+       
             #ask user if he wants to buy more items
             further = input("Do you want to buy any thing else[Y/N]: ")
             if further == "Y" or further =="y":
                 menu(bal)
             else:
                 return "Collect your Balance: $" + str(bal)
+                print("Thank you for using our service.")
+                print("Have a great day ahead!")
         # If stock is not available
         else:
             print("No items left for this code")
@@ -86,7 +105,7 @@ def balance(money_in,purchase,item):
         
 # Main driver function
 def main():
-    print("Welcome to our Vending Machine\n\n")
+    print("How Can We Help you?!\n\n")
     money_input()
 
 main()
